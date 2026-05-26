@@ -52,7 +52,7 @@ Configured SAML SSO between Entra ID (Identity Provider) and Salesforce Develope
 
 **Step 1 - Basic SAML Configuration: Entity ID and ACS URL**
 
-![Federation SAML Configuration RVR](images/Federation_SAML__Configuration_RVR.png)
+![Federation SAML Configuration RVR](images/Federation_SAML_Configuration_RVR.png)
 
 Basic SAML Configuration panel showing Entity ID (`https://riverviewregional-dev-ed.develop.my.salesforce.com`) and Reply URL (ACS) pointed at the Salesforce callback endpoint. These two fields are what Salesforce requires before it will accept a SAML assertion from Entra as the IdP.
 
@@ -70,7 +70,7 @@ Salesforce Single Sign-On Settings page confirming Federated Single Sign-On Usin
 
 **Step 3 - Salesforce SAML SSO settings configured with Entra values**
 
-![Federation SSO SAML Settings](images/Federation_SSO__SAML_Settings.png)
+![Federation SSO SAML Settings](images/Federation_SSO_SAML_Settings.png)
 
 SAML Single Sign-On Settings detail page showing all Entra ID values applied: Name: Entra_ID_SSO, SAML Version 2.0, Identity Provider Certificate uploaded (CN=Microsoft Azure Federated SSO Certificate, expiry 22 May 2029), Request Signature Method: RSA-SHA256, Identity Provider Login URL: `https://login.microsoftonline.com/4...`. Entity ID confirms the Salesforce org URL. Salesforce is now fully configured to trust assertions from Entra ID.
 
@@ -208,7 +208,7 @@ PowerShell terminal shows the full automation run: Connect-MgGraph authenticated
 
 **Step 2 - Both apps confirmed live in Entra App Registrations**
 
-![Federation App Registration Success](images/Federation_App__Registration_Success.png)
+![Federation App Registration Success](images/Federation_App_Registration_Success.png)
 
 App registrations list shows 9 total applications including RVR-OAuth-OIDC-Lab (created 5/25/2026, Client ID: 1077c03a...) and RVR-OAuth-OIDC-Lab-Auto (created 5/25/2026, Client ID: 0f9b0af5...) both with green "Current" client secret status. Proves the PowerShell script produces an app registration identical in structure to the manual portal workflow.
 
